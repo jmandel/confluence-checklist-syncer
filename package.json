@@ -1,0 +1,19 @@
+{
+  "name": "confluence-checklist-manager-demo",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Project and sync externally managed checklists into Confluence DC/Server pages, preserving states and user edits.",
+  "scripts": {
+    "sync:v1": "bun run scripts/sync-demo.ts --phase v1",
+    "sync:v2": "bun run scripts/sync-demo.ts --phase v2",
+    "sync:v1:dry": "bun run scripts/sync-demo.ts --phase v1 --dry",
+    "sync:v2:dry": "bun run scripts/sync-demo.ts --phase v2 --dry"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4"
+  }
+}
