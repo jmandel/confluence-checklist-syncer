@@ -1,0 +1,70 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Implementable Technology Specifications",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Implementable-Technology-Specifications:page:messaging",
+          "text": "messaging.html - Review and approve for R6"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:page:documents",
+          "text": "documents.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: MessageHeader",
+      "items": [
+        {
+          "id": "Implementable-Technology-Specifications:resource:MessageHeader:examples",
+          "text": "MessageHeader - Examples validated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:MessageHeader:narrative",
+          "text": "MessageHeader - Narrative updated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:MessageHeader:breaking",
+          "text": "MessageHeader - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Composition",
+      "items": [
+        {
+          "id": "Implementable-Technology-Specifications:resource:Composition:examples",
+          "text": "Composition - Examples validated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:Composition:narrative",
+          "text": "Composition - Narrative updated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:Composition:breaking",
+          "text": "Composition - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ImplementationGuide",
+      "items": [
+        {
+          "id": "Implementable-Technology-Specifications:resource:ImplementationGuide:examples",
+          "text": "ImplementationGuide - Examples validated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:ImplementationGuide:narrative",
+          "text": "ImplementationGuide - Narrative updated"
+        },
+        {
+          "id": "Implementable-Technology-Specifications:resource:ImplementationGuide:breaking",
+          "text": "ImplementationGuide - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

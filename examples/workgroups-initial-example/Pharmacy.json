@@ -1,0 +1,83 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Pharmacy",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Pharmacy:page:medications",
+          "text": "medications.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Medication",
+      "items": [
+        {
+          "id": "Pharmacy:resource:Medication:examples",
+          "text": "Medication - Examples validated"
+        },
+        {
+          "id": "Pharmacy:resource:Medication:narrative",
+          "text": "Medication - Narrative updated"
+        },
+        {
+          "id": "Pharmacy:resource:Medication:breaking",
+          "text": "Medication - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: MedicationRequest",
+      "items": [
+        {
+          "id": "Pharmacy:resource:MedicationRequest:examples",
+          "text": "MedicationRequest - Examples validated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationRequest:narrative",
+          "text": "MedicationRequest - Narrative updated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationRequest:breaking",
+          "text": "MedicationRequest - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: MedicationDispense",
+      "items": [
+        {
+          "id": "Pharmacy:resource:MedicationDispense:examples",
+          "text": "MedicationDispense - Examples validated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationDispense:narrative",
+          "text": "MedicationDispense - Narrative updated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationDispense:breaking",
+          "text": "MedicationDispense - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: MedicationAdministration",
+      "items": [
+        {
+          "id": "Pharmacy:resource:MedicationAdministration:examples",
+          "text": "MedicationAdministration - Examples validated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationAdministration:narrative",
+          "text": "MedicationAdministration - Narrative updated"
+        },
+        {
+          "id": "Pharmacy:resource:MedicationAdministration:breaking",
+          "text": "MedicationAdministration - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Clinical Decision Support",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Clinical-Decision-Support:page:clinicalreasoning",
+          "text": "clinicalreasoning.html - Review and approve for R6"
+        },
+        {
+          "id": "Clinical-Decision-Support:page:cds-hooks",
+          "text": "cds-hooks.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: PlanDefinition",
+      "items": [
+        {
+          "id": "Clinical-Decision-Support:resource:PlanDefinition:examples",
+          "text": "PlanDefinition - Examples validated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:PlanDefinition:narrative",
+          "text": "PlanDefinition - Narrative updated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:PlanDefinition:breaking",
+          "text": "PlanDefinition - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ActivityDefinition",
+      "items": [
+        {
+          "id": "Clinical-Decision-Support:resource:ActivityDefinition:examples",
+          "text": "ActivityDefinition - Examples validated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:ActivityDefinition:narrative",
+          "text": "ActivityDefinition - Narrative updated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:ActivityDefinition:breaking",
+          "text": "ActivityDefinition - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: RequestOrchestration",
+      "items": [
+        {
+          "id": "Clinical-Decision-Support:resource:RequestOrchestration:examples",
+          "text": "RequestOrchestration - Examples validated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:RequestOrchestration:narrative",
+          "text": "RequestOrchestration - Narrative updated"
+        },
+        {
+          "id": "Clinical-Decision-Support:resource:RequestOrchestration:breaking",
+          "text": "RequestOrchestration - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

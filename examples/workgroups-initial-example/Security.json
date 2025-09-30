@@ -1,0 +1,74 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Security",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Security:page:security",
+          "text": "security.html - Review and approve for R6"
+        },
+        {
+          "id": "Security:page:security-labels",
+          "text": "security-labels.html - Review and approve for R6"
+        },
+        {
+          "id": "Security:page:consent",
+          "text": "consent.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Consent",
+      "items": [
+        {
+          "id": "Security:resource:Consent:examples",
+          "text": "Consent - Examples validated"
+        },
+        {
+          "id": "Security:resource:Consent:narrative",
+          "text": "Consent - Narrative updated"
+        },
+        {
+          "id": "Security:resource:Consent:breaking",
+          "text": "Consent - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Provenance",
+      "items": [
+        {
+          "id": "Security:resource:Provenance:examples",
+          "text": "Provenance - Examples validated"
+        },
+        {
+          "id": "Security:resource:Provenance:narrative",
+          "text": "Provenance - Narrative updated"
+        },
+        {
+          "id": "Security:resource:Provenance:breaking",
+          "text": "Provenance - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: AuditEvent",
+      "items": [
+        {
+          "id": "Security:resource:AuditEvent:examples",
+          "text": "AuditEvent - Examples validated"
+        },
+        {
+          "id": "Security:resource:AuditEvent:narrative",
+          "text": "AuditEvent - Narrative updated"
+        },
+        {
+          "id": "Security:resource:AuditEvent:breaking",
+          "text": "AuditEvent - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

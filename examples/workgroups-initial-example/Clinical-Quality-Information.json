@@ -1,0 +1,70 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Clinical Quality Information",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Clinical-Quality-Information:page:clinicalimpression",
+          "text": "clinicalimpression.html - Review and approve for R6"
+        },
+        {
+          "id": "Clinical-Quality-Information:page:quality-reporting",
+          "text": "quality-reporting.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Measure",
+      "items": [
+        {
+          "id": "Clinical-Quality-Information:resource:Measure:examples",
+          "text": "Measure - Examples validated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:Measure:narrative",
+          "text": "Measure - Narrative updated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:Measure:breaking",
+          "text": "Measure - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: MeasureReport",
+      "items": [
+        {
+          "id": "Clinical-Quality-Information:resource:MeasureReport:examples",
+          "text": "MeasureReport - Examples validated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:MeasureReport:narrative",
+          "text": "MeasureReport - Narrative updated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:MeasureReport:breaking",
+          "text": "MeasureReport - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: GuidanceResponse",
+      "items": [
+        {
+          "id": "Clinical-Quality-Information:resource:GuidanceResponse:examples",
+          "text": "GuidanceResponse - Examples validated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:GuidanceResponse:narrative",
+          "text": "GuidanceResponse - Narrative updated"
+        },
+        {
+          "id": "Clinical-Quality-Information:resource:GuidanceResponse:breaking",
+          "text": "GuidanceResponse - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

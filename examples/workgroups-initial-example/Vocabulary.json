@@ -1,0 +1,87 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Vocabulary",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Vocabulary:page:terminologies",
+          "text": "terminologies.html - Review and approve for R6"
+        },
+        {
+          "id": "Vocabulary:page:terminology-service",
+          "text": "terminology-service.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: CodeSystem",
+      "items": [
+        {
+          "id": "Vocabulary:resource:CodeSystem:examples",
+          "text": "CodeSystem - Examples validated"
+        },
+        {
+          "id": "Vocabulary:resource:CodeSystem:narrative",
+          "text": "CodeSystem - Narrative updated"
+        },
+        {
+          "id": "Vocabulary:resource:CodeSystem:breaking",
+          "text": "CodeSystem - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ValueSet",
+      "items": [
+        {
+          "id": "Vocabulary:resource:ValueSet:examples",
+          "text": "ValueSet - Examples validated"
+        },
+        {
+          "id": "Vocabulary:resource:ValueSet:narrative",
+          "text": "ValueSet - Narrative updated"
+        },
+        {
+          "id": "Vocabulary:resource:ValueSet:breaking",
+          "text": "ValueSet - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ConceptMap",
+      "items": [
+        {
+          "id": "Vocabulary:resource:ConceptMap:examples",
+          "text": "ConceptMap - Examples validated"
+        },
+        {
+          "id": "Vocabulary:resource:ConceptMap:narrative",
+          "text": "ConceptMap - Narrative updated"
+        },
+        {
+          "id": "Vocabulary:resource:ConceptMap:breaking",
+          "text": "ConceptMap - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: NamingSystem",
+      "items": [
+        {
+          "id": "Vocabulary:resource:NamingSystem:examples",
+          "text": "NamingSystem - Examples validated"
+        },
+        {
+          "id": "Vocabulary:resource:NamingSystem:narrative",
+          "text": "NamingSystem - Narrative updated"
+        },
+        {
+          "id": "Vocabulary:resource:NamingSystem:breaking",
+          "text": "NamingSystem - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

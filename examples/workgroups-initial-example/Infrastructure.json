@@ -1,0 +1,78 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Infrastructure",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Infrastructure:page:datatypes",
+          "text": "datatypes.html - Review and approve for R6"
+        },
+        {
+          "id": "Infrastructure:page:references",
+          "text": "references.html - Review and approve for R6"
+        },
+        {
+          "id": "Infrastructure:page:formats",
+          "text": "formats.html - Review and approve for R6"
+        },
+        {
+          "id": "Infrastructure:page:extensibility",
+          "text": "extensibility.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Bundle",
+      "items": [
+        {
+          "id": "Infrastructure:resource:Bundle:examples",
+          "text": "Bundle - Examples validated"
+        },
+        {
+          "id": "Infrastructure:resource:Bundle:narrative",
+          "text": "Bundle - Narrative updated"
+        },
+        {
+          "id": "Infrastructure:resource:Bundle:breaking",
+          "text": "Bundle - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Parameters",
+      "items": [
+        {
+          "id": "Infrastructure:resource:Parameters:examples",
+          "text": "Parameters - Examples validated"
+        },
+        {
+          "id": "Infrastructure:resource:Parameters:narrative",
+          "text": "Parameters - Narrative updated"
+        },
+        {
+          "id": "Infrastructure:resource:Parameters:breaking",
+          "text": "Parameters - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Binary",
+      "items": [
+        {
+          "id": "Infrastructure:resource:Binary:examples",
+          "text": "Binary - Examples validated"
+        },
+        {
+          "id": "Infrastructure:resource:Binary:narrative",
+          "text": "Binary - Narrative updated"
+        },
+        {
+          "id": "Infrastructure:resource:Binary:breaking",
+          "text": "Binary - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

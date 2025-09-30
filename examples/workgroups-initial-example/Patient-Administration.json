@@ -1,0 +1,87 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Patient Administration",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Patient-Administration:page:patient",
+          "text": "patient.html - Review and approve for R6"
+        },
+        {
+          "id": "Patient-Administration:page:practitioner",
+          "text": "practitioner.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Patient",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Patient:examples",
+          "text": "Patient - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Patient:narrative",
+          "text": "Patient - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Patient:breaking",
+          "text": "Patient - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Practitioner",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Practitioner:examples",
+          "text": "Practitioner - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Practitioner:narrative",
+          "text": "Practitioner - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Practitioner:breaking",
+          "text": "Practitioner - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Organization",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Organization:examples",
+          "text": "Organization - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Organization:narrative",
+          "text": "Organization - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Organization:breaking",
+          "text": "Organization - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Location",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Location:examples",
+          "text": "Location - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Location:narrative",
+          "text": "Location - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Location:breaking",
+          "text": "Location - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

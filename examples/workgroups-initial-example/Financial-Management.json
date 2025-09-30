@@ -1,0 +1,83 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Financial Management",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Financial-Management:page:financial",
+          "text": "financial.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Claim",
+      "items": [
+        {
+          "id": "Financial-Management:resource:Claim:examples",
+          "text": "Claim - Examples validated"
+        },
+        {
+          "id": "Financial-Management:resource:Claim:narrative",
+          "text": "Claim - Narrative updated"
+        },
+        {
+          "id": "Financial-Management:resource:Claim:breaking",
+          "text": "Claim - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ClaimResponse",
+      "items": [
+        {
+          "id": "Financial-Management:resource:ClaimResponse:examples",
+          "text": "ClaimResponse - Examples validated"
+        },
+        {
+          "id": "Financial-Management:resource:ClaimResponse:narrative",
+          "text": "ClaimResponse - Narrative updated"
+        },
+        {
+          "id": "Financial-Management:resource:ClaimResponse:breaking",
+          "text": "ClaimResponse - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Coverage",
+      "items": [
+        {
+          "id": "Financial-Management:resource:Coverage:examples",
+          "text": "Coverage - Examples validated"
+        },
+        {
+          "id": "Financial-Management:resource:Coverage:narrative",
+          "text": "Coverage - Narrative updated"
+        },
+        {
+          "id": "Financial-Management:resource:Coverage:breaking",
+          "text": "Coverage - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ExplanationOfBenefit",
+      "items": [
+        {
+          "id": "Financial-Management:resource:ExplanationOfBenefit:examples",
+          "text": "ExplanationOfBenefit - Examples validated"
+        },
+        {
+          "id": "Financial-Management:resource:ExplanationOfBenefit:narrative",
+          "text": "ExplanationOfBenefit - Narrative updated"
+        },
+        {
+          "id": "Financial-Management:resource:ExplanationOfBenefit:breaking",
+          "text": "ExplanationOfBenefit - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

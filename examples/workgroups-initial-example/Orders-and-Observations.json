@@ -1,0 +1,87 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Orders and Observations",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Orders-and-Observations:page:observation",
+          "text": "observation.html - Review and approve for R6"
+        },
+        {
+          "id": "Orders-and-Observations:page:diagnosticreport",
+          "text": "diagnosticreport.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Observation",
+      "items": [
+        {
+          "id": "Orders-and-Observations:resource:Observation:examples",
+          "text": "Observation - Examples validated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:Observation:narrative",
+          "text": "Observation - Narrative updated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:Observation:breaking",
+          "text": "Observation - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: DiagnosticReport",
+      "items": [
+        {
+          "id": "Orders-and-Observations:resource:DiagnosticReport:examples",
+          "text": "DiagnosticReport - Examples validated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:DiagnosticReport:narrative",
+          "text": "DiagnosticReport - Narrative updated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:DiagnosticReport:breaking",
+          "text": "DiagnosticReport - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: ServiceRequest",
+      "items": [
+        {
+          "id": "Orders-and-Observations:resource:ServiceRequest:examples",
+          "text": "ServiceRequest - Examples validated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:ServiceRequest:narrative",
+          "text": "ServiceRequest - Narrative updated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:ServiceRequest:breaking",
+          "text": "ServiceRequest - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Specimen",
+      "items": [
+        {
+          "id": "Orders-and-Observations:resource:Specimen:examples",
+          "text": "Specimen - Examples validated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:Specimen:narrative",
+          "text": "Specimen - Narrative updated"
+        },
+        {
+          "id": "Orders-and-Observations:resource:Specimen:breaking",
+          "text": "Specimen - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}

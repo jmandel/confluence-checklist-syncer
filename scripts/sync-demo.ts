@@ -1,35 +1,42 @@
 // scripts/sync-demo.ts
-// Bun-friendly demo driver. Syncs 10 workgroups with a v1 spec, then you can re-run with --phase v2.
+// Bun-friendly demo driver. Reads workgroup checklist specs from files in a directory,
+// and creates/updates child pages under a parent page, preserving checkbox states and assignees.
 // Usage:
 //   bun install
 //   export CONFLUENCE_BASE_URL="https://confluence.hl7.org"
 //   export CONFLUENCE_PAT="your_dc_pat"
 //   export SPACE_KEY="FMG"
 //   export PARENT_PAGE_ID="123456"        // ancestor page ID
-//   bun run scripts/sync-demo.ts --phase v1
-//   # later
-//   bun run scripts/sync-demo.ts --phase v2
+//   bun run scripts/sync-demo.ts
 //
-// Flags: --phase v1|v2  [--dry]
+// Flags: [--dry] [--workgroups-dir ./workgroups]
 //
-// Tip: Override the wg list with WG_LIST env: WG_LIST="WG-ABC,WG-DEF,..."
+// The workgroups directory should contain files named after each workgroup (e.g., WG-ADM.json, WG-BAL.json)
+// Each file should contain a ChecklistSpec in JSON format.
 //
 import { ConfluenceChecklistManager, ChecklistSpec } from "../src/confluence-checklist-manager";
+import { readdirSync, readFileSync } from "fs";
+import { join, basename, extname } from "path";
 
 const BASE_URL = process.env.CONFLUENCE_BASE_URL!;
 const PAT = process.env.CONFLUENCE_PAT!;
 const SPACE_KEY = process.env.SPACE_KEY || "FMG";
-const PARENT_PAGE_ID = process.env.PARENT_PAGE_ID; // optional
+const PARENT_PAGE_ID = process.env.PARENT_PAGE_ID; // required for this use case
 const DRY = process.argv.includes("--dry");
 
 function argAfter(flag: string): string | undefined {
   const i = process.argv.indexOf(flag);
   return i >= 0 ? process.argv[i+1] : undefined;
 }
-const phase = argAfter("--phase") ?? "v1"; // "v1" or "v2"
+const WORKGROUPS_DIR = argAfter("--workgroups-dir") ?? "./workgroups";
 
 if (!BASE_URL || !PAT) {
   console.error("Set env: CONFLUENCE_BASE_URL and CONFLUENCE_PAT");
+  process.exit(1);
+}
+
+if (!PARENT_PAGE_ID) {
+  console.error("Set env: PARENT_PAGE_ID (the parent page under which workgroup pages will be created)");
   process.exit(1);
 }
 
@@ -40,66 +47,68 @@ const mgr = new ConfluenceChecklistManager({
   logger: (msg?: any, ...rest: any[]) => console.log(msg, ...rest),
 });
 
-// Default 10 WGs (override with WG_LIST env)
-const defaultWGs = ["WG-ADM","WG-BAL","WG-CAR","WG-DER","WG-ENG","WG-FIN","WG-GOV","WG-HIS","WG-INT","WG-JSN"];
-const WG_LIST = (process.env.WG_LIST ? process.env.WG_LIST.split(",").map(s => s.trim()).filter(Boolean) : defaultWGs);
+/** Load workgroup spec from a JSON file */
+function loadWorkgroupSpec(filePath: string): { wgId: string; spec: ChecklistSpec } {
+  const content = readFileSync(filePath, "utf-8");
+  const data = JSON.parse(content);
 
-function makeSpecV1(wg: string): ChecklistSpec {
+  // Extract workgroup ID from filename (e.g., WG-ADM.json -> WG-ADM)
+  const fileName = basename(filePath, extname(filePath));
+
   return {
-    panelTitle: "HL7 FHIR Checklist (managed)",
-    title: `FHIR R6 Pre‑Publication — ${wg}`,
-    sections: [
-      { heading: "Readiness", items: [
-        { id: `${wg}:pkg-updated`, text: "Packages (IGs/modules) updated to R6 naming" },
-        { id: `${wg}:wg-approval`, text: "Working Group approval recorded in minutes" }
-      ]},
-      { heading: "Testing", items: [
-        { id: `${wg}:ci-green`, text: "CI pipeline green (validation passes)" },
-        { id: `${wg}:examples-checked`, text: "Example instances updated" }
-      ]}
-    ]
+    wgId: fileName,
+    spec: data as ChecklistSpec
   };
 }
 
-function makeSpecV2(wg: string): ChecklistSpec {
-  // Reordered + added an item, to demonstrate preserving states and bodies
-  return {
-    panelTitle: "HL7 FHIR Checklist (managed)",
-    title: `FHIR R6 Pre‑Publication — ${wg}`,
-    sections: [
-      { heading: "Approvals", items: [
-        { id: `${wg}:wg-approval`, text: "Working Group approval recorded in minutes" }
-      ]},
-      { heading: "Readiness", items: [
-        { id: `${wg}:pkg-updated`, text: "Packages (IGs/modules) updated to R6 naming" }
-      ]},
-      { heading: "Testing", items: [
-        { id: `${wg}:ci-green`, text: "CI pipeline green (validation passes)" },
-        { id: `${wg}:examples-checked`, text: "Example instances updated" },
-        { id: `${wg}:tx-server`, text: "Terminology server preflight complete" }
-      ]}
-    ]
-  };
+/** Load all workgroup specs from the directory */
+function loadAllWorkgroups(dirPath: string): Array<{ wgId: string; spec: ChecklistSpec }> {
+  try {
+    const files = readdirSync(dirPath)
+      .filter(f => f.endsWith('.json'))
+      .map(f => join(dirPath, f));
+
+    if (files.length === 0) {
+      console.warn(`No JSON files found in ${dirPath}`);
+      return [];
+    }
+
+    return files.map(loadWorkgroupSpec);
+  } catch (err: any) {
+    console.error(`Error reading workgroups directory ${dirPath}: ${err.message}`);
+    process.exit(1);
+  }
 }
 
 async function run() {
-  console.log(`Phase: ${phase} | Space: ${SPACE_KEY} | Parent: ${PARENT_PAGE_ID ?? "(none)"} | Dry: ${DRY}`);
+  console.log(`Space: ${SPACE_KEY} | Parent: ${PARENT_PAGE_ID} | Workgroups Dir: ${WORKGROUPS_DIR} | Dry: ${DRY}`);
 
-  const plans = WG_LIST.map((wg) => ({
-    wgId: wg,
+  // Load all workgroup specifications from files
+  const workgroups = loadAllWorkgroups(WORKGROUPS_DIR);
+
+  if (workgroups.length === 0) {
+    console.error("No workgroup specification files found. Exiting.");
+    process.exit(1);
+  }
+
+  console.log(`Loaded ${workgroups.length} workgroup(s): ${workgroups.map(w => w.wgId).join(", ")}`);
+
+  // Build plans for each workgroup
+  const plans = workgroups.map(({ wgId, spec }) => ({
+    wgId: wgId,
     spaceKey: SPACE_KEY,
-    pageTitle: `${wg} — Pre‑Publication Checklist (R6)`,
+    pageTitle: spec.title || `${wgId} Checklist`,
     parentId: PARENT_PAGE_ID,
-    labels: ["hl7","fhir","prepub", wg.toLowerCase()],
-    spec: phase === "v1" ? makeSpecV1(wg) : makeSpecV2(wg),
+    labels: ["managed-checklist", wgId.toLowerCase()],
+    spec: spec,
     includeRemovedSection: false,
     dryRun: DRY,
-    propertyKey: "hl7.checklistMeta",
-    propertyExtra: { workgroup: wg, release: "R6", phase }
+    propertyKey: "checklist.meta",
+    propertyExtra: { workgroup: wgId, syncedAt: new Date().toISOString() }
   }));
 
   const results = await mgr.syncWorkgroups(plans);
-  console.log("Results:");
+  console.log("\nResults:");
   console.log(results);
 }
 

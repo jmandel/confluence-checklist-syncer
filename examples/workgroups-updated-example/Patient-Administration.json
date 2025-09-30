@@ -1,0 +1,91 @@
+{
+  "panelTitle": "HL7 FHIR Checklist (managed)",
+  "title": "FHIR R6 Pre‑Publication — Patient Administration",
+  "sections": [
+    {
+      "heading": "Specification Pages",
+      "items": [
+        {
+          "id": "Patient-Administration:page:patient",
+          "text": "patient.html - Review and approve for R6"
+        },
+        {
+          "id": "Patient-Administration:page:practitioner",
+          "text": "practitioner.html - Review and approve for R6"
+        },
+        {
+          "id": "Patient-Administration:page:scheduling",
+          "text": "scheduling.html - Review and approve for R6"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Patient",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Patient:examples",
+          "text": "Patient - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Patient:narrative",
+          "text": "Patient - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Patient:breaking",
+          "text": "Patient - Breaking changes documented"
+        },
+        {
+          "id": "Patient-Administration:resource:Patient:privacy",
+          "text": "Patient - Privacy impact assessed"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Practitioner",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Practitioner:examples",
+          "text": "Practitioner - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Practitioner:narrative",
+          "text": "Practitioner - Narrative updated"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Location",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Location:examples",
+          "text": "Location - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Location:narrative",
+          "text": "Location - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Location:breaking",
+          "text": "Location - Breaking changes documented"
+        }
+      ]
+    },
+    {
+      "heading": "Resources: Appointment",
+      "items": [
+        {
+          "id": "Patient-Administration:resource:Appointment:examples",
+          "text": "Appointment - Examples validated"
+        },
+        {
+          "id": "Patient-Administration:resource:Appointment:narrative",
+          "text": "Appointment - Narrative updated"
+        },
+        {
+          "id": "Patient-Administration:resource:Appointment:breaking",
+          "text": "Appointment - Breaking changes documented"
+        }
+      ]
+    }
+  ]
+}
